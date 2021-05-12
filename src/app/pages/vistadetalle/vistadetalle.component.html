@@ -1,0 +1,34 @@
+
+<div id="contenedor">
+  <h1>{{ detalle.titulo }}</h1>
+
+  <article>
+    <h3>Descripción</h3>
+    <p>{{ detalle.descripcion }}</p>
+
+    <section>
+      <h3>Empresa</h3>
+      <p>{{ detalle.empresa }}</p>
+    </section>
+
+    <section>
+      <h3>Salario</h3>
+      <p>{{ detalle.salario | currency: "EUR" }}</p>
+    </section>
+
+    <section>
+      <h3>Localización</h3>
+      <p>{{ detalle.ciudad }}</p>
+    </section>
+
+    <section>
+      <h3>E-Mail</h3>
+      <p>{{ detalle.email }}</p>
+    </section>
+
+  </article>
+
+  <div id="footer">
+    <p>&copy; All rights reserved. Created by Jorge Suárez</p>
+  </div>
+</div>

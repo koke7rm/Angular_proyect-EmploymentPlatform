@@ -1,0 +1,47 @@
+
+<div id="contenedor">
+
+  <h1>INTRODUCE LOS DATOS DE LA NUEVA OFERTA</h1>
+
+<div class="container">
+    <div class="row" class="col-md-5" style="margin-left: 30%; margin-top: 10%; background: rgba(0,0,0, 0.80); color: white;">
+        <form #oferta="ngForm" (ngSubmit)="onSubmit(oferta)">
+            <div class="form-group">
+              <label>Introduce Título de la oferta*</label>
+              <input type="text" class="form-control" name="titulo" #titulo [(ngModel)]="ofertaModel.titulo" required >
+              <div *ngIf="this.ofertaModel.validarTitulo" style="color: red; font-size: 0.8rem;">El campo título tiene que ser menor de 100 caracteres</div>
+            </div>
+            <div class="form-group">
+              <label>Introduce Descripción*</label>
+              <input type="text" class="form-control" name="descripcion" #descripcion [(ngModel)]="ofertaModel.descripcion" required>
+              <div *ngIf="this.ofertaModel.validarDescripcion" style="color: red; font-size: 0.8rem;">El campo Descripción tiene que ser menor de 300 caracteres</div>
+            </div>
+            <div class="form-group">
+                <label>Introduce Empresa*</label>
+                <input type="text" class="form-control" name="empresa" #empresa [(ngModel)]="ofertaModel.empresa" required>
+                <div *ngIf="this.ofertaModel.validarEmpresa" style="color: red; font-size: 0.8rem;">El campo empresa tiene que ser menor de 50 caracteres</div>
+              </div>
+            <div class="form-group">
+                <label>Introduce Salario*</label>
+                <input type="number" class="form-control" name="salario" #salario [(ngModel)]="ofertaModel.salario" required>
+                <div *ngIf="this.ofertaModel.validarSalario" style="color: red; font-size: 0.8rem;">El salario introducido no es correcto</div>
+              </div>
+            <div class="form-group">
+                <label>Introduce Ciudad*</label>
+                <input type="text" class="form-control" name="ciudad" #ciudad [(ngModel)]="ofertaModel.ciudad" required>
+                <div *ngIf="this.ofertaModel.validarCiudad" style="color: red; font-size: 0.8rem;">El campo ciudad tiene que ser menor de 50 caracteres</div>
+              </div>
+            <div class="form-group">
+                <label>Introduce E-Mail*</label>
+                <input type="text" class="form-control" name="email" #email [(ngModel)]="ofertaModel.email" required>
+                <div *ngIf="this.ofertaModel.validarCorreo" style="color: red; font-size: 0.8rem;">El campo E-Mail tiene que ser menor de 50 caracteres y ser un correo válido</div>
+              </div>      
+            
+            <button type="submit" [disabled]="!oferta.form.valid"  class="btn btn-primary" (click)="this.envioRegistro()" style="margin-left: 10%;">GUARDAR NUEVA OFERTA</button>
+            <a class="btn btn-primary" routerLink="/adminofertas" role="button" style="margin-left: 8%;">CANCELAR</a>
+        </form>
+    </div>
+  </div>
+</div>
+
+

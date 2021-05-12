@@ -1,0 +1,29 @@
+
+<div id="contenedor">
+
+  <header>
+    <h3>OFERTAS DEL DÍA</h3>
+  </header>
+  
+<div class="container" class="col-md-5" style="background: rgba(0,0,0, 0.80); margin-left: 28%; margin-bottom: 10%; color: white;">
+  <div class="row">
+    <table class="table table-bordered">
+      <thead>
+        
+      </thead>
+      <tbody>
+        <tr *ngFor="let oferta of this.ofertas">
+          <th scope="row" id="tituloOferta">{{oferta.titulo}}
+            <a class="btn btn-primary" id="btnDetalle" routerLink="/detalle" (click)="this.getDetalleOfertas(oferta.id)"
+              role="button">Ir a oferta</a></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="footer">
+  <p>&copy; All rights reserved. Created by Jorge Suárez </p>
+</div>
+
+</div>

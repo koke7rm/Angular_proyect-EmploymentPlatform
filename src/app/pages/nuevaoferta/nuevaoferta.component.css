@@ -1,0 +1,22 @@
+
+
+#contenedor{
+     background-image: url(../../../assets/images/datos.jpg);
+     height: 881px; 
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    background: #457DAC
+}
+
+button[type="submit"]:disabled{
+  
+    background: #3b3b3b;
+   
+  }
